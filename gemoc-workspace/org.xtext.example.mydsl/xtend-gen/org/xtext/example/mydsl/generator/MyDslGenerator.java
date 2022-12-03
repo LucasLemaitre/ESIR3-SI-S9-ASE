@@ -3,10 +3,14 @@
  */
 package org.xtext.example.mydsl.generator;
 
+import com.google.common.collect.Iterables;
+import fr.ice.fsm.model.fsm.FSM;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 /**
  * Generates code from your model files on save.
@@ -17,5 +21,12 @@ import org.eclipse.xtext.generator.IGeneratorContext;
 public class MyDslGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    Iterable<FSM> _filter = Iterables.<FSM>filter(IteratorExtensions.<EObject>toIterable(resource.getAllContents()), FSM.class);
+    for (final FSM fsm : _filter) {
+      {
+        FsmAspectInterpretor fsmAspect = new FsmAspectInterpretor();
+        fsmAspect.run(fsm);
+      }
+    }
   }
 }

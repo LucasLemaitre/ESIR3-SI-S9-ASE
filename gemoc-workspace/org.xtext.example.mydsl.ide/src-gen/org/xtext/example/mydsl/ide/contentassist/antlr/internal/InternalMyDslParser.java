@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'fsm'", "'state'", "'init'", "'entry'", "'transition'", "'->'", "'['", "']'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'fsm'", "'state'", "'entry'", "'transition'", "'->'", "'['", "']'", "'init'"
     };
     public static final int RULE_ID=5;
     public static final int RULE_WS=9;
@@ -398,7 +398,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             if ( (LA1_0==12) ) {
                 alt1=1;
             }
-            else if ( (LA1_0==15) ) {
+            else if ( (LA1_0==14) ) {
                 alt1=2;
             }
             else {
@@ -764,7 +764,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==15) ) {
+                if ( (LA3_0==14) ) {
                     alt3=1;
                 }
 
@@ -947,7 +947,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==12||LA4_0==15) ) {
+                if ( (LA4_0==12||LA4_0==14) ) {
                     alt4=1;
                 }
 
@@ -1106,38 +1106,42 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__State__Group__1__Impl"
-    // InternalMyDsl.g:368:1: rule__State__Group__1__Impl : ( ( 'init' )? ) ;
+    // InternalMyDsl.g:368:1: rule__State__Group__1__Impl : ( ( rule__State__Init_stateAssignment_1 )? ) ;
     public final void rule__State__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyDsl.g:372:1: ( ( ( 'init' )? ) )
-            // InternalMyDsl.g:373:1: ( ( 'init' )? )
+            // InternalMyDsl.g:372:1: ( ( ( rule__State__Init_stateAssignment_1 )? ) )
+            // InternalMyDsl.g:373:1: ( ( rule__State__Init_stateAssignment_1 )? )
             {
-            // InternalMyDsl.g:373:1: ( ( 'init' )? )
-            // InternalMyDsl.g:374:2: ( 'init' )?
+            // InternalMyDsl.g:373:1: ( ( rule__State__Init_stateAssignment_1 )? )
+            // InternalMyDsl.g:374:2: ( rule__State__Init_stateAssignment_1 )?
             {
-             before(grammarAccess.getStateAccess().getInitKeyword_1()); 
-            // InternalMyDsl.g:375:2: ( 'init' )?
+             before(grammarAccess.getStateAccess().getInit_stateAssignment_1()); 
+            // InternalMyDsl.g:375:2: ( rule__State__Init_stateAssignment_1 )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==13) ) {
+            if ( (LA5_0==18) ) {
                 alt5=1;
             }
             switch (alt5) {
                 case 1 :
-                    // InternalMyDsl.g:375:3: 'init'
+                    // InternalMyDsl.g:375:3: rule__State__Init_stateAssignment_1
                     {
-                    match(input,13,FOLLOW_2); 
+                    pushFollow(FOLLOW_2);
+                    rule__State__Init_stateAssignment_1();
+
+                    state._fsp--;
+
 
                     }
                     break;
 
             }
 
-             after(grammarAccess.getStateAccess().getInitKeyword_1()); 
+             after(grammarAccess.getStateAccess().getInit_stateAssignment_1()); 
 
             }
 
@@ -1296,7 +1300,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:428:2: 'entry'
             {
              before(grammarAccess.getStateAccess().getEntryKeyword_3()); 
-            match(input,14,FOLLOW_2); 
+            match(input,13,FOLLOW_2); 
              after(grammarAccess.getStateAccess().getEntryKeyword_3()); 
 
             }
@@ -1451,7 +1455,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:482:2: 'transition'
             {
              before(grammarAccess.getTransitionAccess().getTransitionKeyword_0()); 
-            match(input,15,FOLLOW_2); 
+            match(input,14,FOLLOW_2); 
              after(grammarAccess.getTransitionAccess().getTransitionKeyword_0()); 
 
             }
@@ -1696,7 +1700,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:563:2: '->'
             {
              before(grammarAccess.getTransitionAccess().getHyphenMinusGreaterThanSignKeyword_3()); 
-            match(input,16,FOLLOW_2); 
+            match(input,15,FOLLOW_2); 
              after(grammarAccess.getTransitionAccess().getHyphenMinusGreaterThanSignKeyword_3()); 
 
             }
@@ -1856,7 +1860,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:617:2: '['
             {
              before(grammarAccess.getTransitionAccess().getLeftSquareBracketKeyword_5()); 
-            match(input,17,FOLLOW_2); 
+            match(input,16,FOLLOW_2); 
              after(grammarAccess.getTransitionAccess().getLeftSquareBracketKeyword_5()); 
 
             }
@@ -2011,7 +2015,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // InternalMyDsl.g:670:2: ']'
             {
              before(grammarAccess.getTransitionAccess().getRightSquareBracketKeyword_7()); 
-            match(input,18,FOLLOW_2); 
+            match(input,17,FOLLOW_2); 
              after(grammarAccess.getTransitionAccess().getRightSquareBracketKeyword_7()); 
 
             }
@@ -2239,18 +2243,63 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__FSM__TransitionsAssignment_4_1"
 
 
+    // $ANTLR start "rule__State__Init_stateAssignment_1"
+    // InternalMyDsl.g:755:1: rule__State__Init_stateAssignment_1 : ( ( 'init' ) ) ;
+    public final void rule__State__Init_stateAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalMyDsl.g:759:1: ( ( ( 'init' ) ) )
+            // InternalMyDsl.g:760:2: ( ( 'init' ) )
+            {
+            // InternalMyDsl.g:760:2: ( ( 'init' ) )
+            // InternalMyDsl.g:761:3: ( 'init' )
+            {
+             before(grammarAccess.getStateAccess().getInit_stateInitKeyword_1_0()); 
+            // InternalMyDsl.g:762:3: ( 'init' )
+            // InternalMyDsl.g:763:4: 'init'
+            {
+             before(grammarAccess.getStateAccess().getInit_stateInitKeyword_1_0()); 
+            match(input,18,FOLLOW_2); 
+             after(grammarAccess.getStateAccess().getInit_stateInitKeyword_1_0()); 
+
+            }
+
+             after(grammarAccess.getStateAccess().getInit_stateInitKeyword_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__State__Init_stateAssignment_1"
+
+
     // $ANTLR start "rule__State__NameAssignment_2"
-    // InternalMyDsl.g:755:1: rule__State__NameAssignment_2 : ( ruleEString ) ;
+    // InternalMyDsl.g:774:1: rule__State__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__State__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyDsl.g:759:1: ( ( ruleEString ) )
-            // InternalMyDsl.g:760:2: ( ruleEString )
+            // InternalMyDsl.g:778:1: ( ( ruleEString ) )
+            // InternalMyDsl.g:779:2: ( ruleEString )
             {
-            // InternalMyDsl.g:760:2: ( ruleEString )
-            // InternalMyDsl.g:761:3: ruleEString
+            // InternalMyDsl.g:779:2: ( ruleEString )
+            // InternalMyDsl.g:780:3: ruleEString
             {
              before(grammarAccess.getStateAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -2281,17 +2330,17 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__State__Output_textAssignment_4"
-    // InternalMyDsl.g:770:1: rule__State__Output_textAssignment_4 : ( ruleEString ) ;
+    // InternalMyDsl.g:789:1: rule__State__Output_textAssignment_4 : ( ruleEString ) ;
     public final void rule__State__Output_textAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyDsl.g:774:1: ( ( ruleEString ) )
-            // InternalMyDsl.g:775:2: ( ruleEString )
+            // InternalMyDsl.g:793:1: ( ( ruleEString ) )
+            // InternalMyDsl.g:794:2: ( ruleEString )
             {
-            // InternalMyDsl.g:775:2: ( ruleEString )
-            // InternalMyDsl.g:776:3: ruleEString
+            // InternalMyDsl.g:794:2: ( ruleEString )
+            // InternalMyDsl.g:795:3: ruleEString
             {
              before(grammarAccess.getStateAccess().getOutput_textEStringParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -2322,17 +2371,17 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__NameAssignment_1"
-    // InternalMyDsl.g:785:1: rule__Transition__NameAssignment_1 : ( ruleEString ) ;
+    // InternalMyDsl.g:804:1: rule__Transition__NameAssignment_1 : ( ruleEString ) ;
     public final void rule__Transition__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyDsl.g:789:1: ( ( ruleEString ) )
-            // InternalMyDsl.g:790:2: ( ruleEString )
+            // InternalMyDsl.g:808:1: ( ( ruleEString ) )
+            // InternalMyDsl.g:809:2: ( ruleEString )
             {
-            // InternalMyDsl.g:790:2: ( ruleEString )
-            // InternalMyDsl.g:791:3: ruleEString
+            // InternalMyDsl.g:809:2: ( ruleEString )
+            // InternalMyDsl.g:810:3: ruleEString
             {
              before(grammarAccess.getTransitionAccess().getNameEStringParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -2363,21 +2412,21 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Start_stateAssignment_2"
-    // InternalMyDsl.g:800:1: rule__Transition__Start_stateAssignment_2 : ( ( ruleEString ) ) ;
+    // InternalMyDsl.g:819:1: rule__Transition__Start_stateAssignment_2 : ( ( ruleEString ) ) ;
     public final void rule__Transition__Start_stateAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyDsl.g:804:1: ( ( ( ruleEString ) ) )
-            // InternalMyDsl.g:805:2: ( ( ruleEString ) )
+            // InternalMyDsl.g:823:1: ( ( ( ruleEString ) ) )
+            // InternalMyDsl.g:824:2: ( ( ruleEString ) )
             {
-            // InternalMyDsl.g:805:2: ( ( ruleEString ) )
-            // InternalMyDsl.g:806:3: ( ruleEString )
+            // InternalMyDsl.g:824:2: ( ( ruleEString ) )
+            // InternalMyDsl.g:825:3: ( ruleEString )
             {
              before(grammarAccess.getTransitionAccess().getStart_stateStateCrossReference_2_0()); 
-            // InternalMyDsl.g:807:3: ( ruleEString )
-            // InternalMyDsl.g:808:4: ruleEString
+            // InternalMyDsl.g:826:3: ( ruleEString )
+            // InternalMyDsl.g:827:4: ruleEString
             {
              before(grammarAccess.getTransitionAccess().getStart_stateStateEStringParserRuleCall_2_0_1()); 
             pushFollow(FOLLOW_2);
@@ -2412,21 +2461,21 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__End_stateAssignment_4"
-    // InternalMyDsl.g:819:1: rule__Transition__End_stateAssignment_4 : ( ( ruleEString ) ) ;
+    // InternalMyDsl.g:838:1: rule__Transition__End_stateAssignment_4 : ( ( ruleEString ) ) ;
     public final void rule__Transition__End_stateAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyDsl.g:823:1: ( ( ( ruleEString ) ) )
-            // InternalMyDsl.g:824:2: ( ( ruleEString ) )
+            // InternalMyDsl.g:842:1: ( ( ( ruleEString ) ) )
+            // InternalMyDsl.g:843:2: ( ( ruleEString ) )
             {
-            // InternalMyDsl.g:824:2: ( ( ruleEString ) )
-            // InternalMyDsl.g:825:3: ( ruleEString )
+            // InternalMyDsl.g:843:2: ( ( ruleEString ) )
+            // InternalMyDsl.g:844:3: ( ruleEString )
             {
              before(grammarAccess.getTransitionAccess().getEnd_stateStateCrossReference_4_0()); 
-            // InternalMyDsl.g:826:3: ( ruleEString )
-            // InternalMyDsl.g:827:4: ruleEString
+            // InternalMyDsl.g:845:3: ( ruleEString )
+            // InternalMyDsl.g:846:4: ruleEString
             {
              before(grammarAccess.getTransitionAccess().getEnd_stateStateEStringParserRuleCall_4_0_1()); 
             pushFollow(FOLLOW_2);
@@ -2461,17 +2510,17 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Transition__Input_textAssignment_6"
-    // InternalMyDsl.g:838:1: rule__Transition__Input_textAssignment_6 : ( ruleEString ) ;
+    // InternalMyDsl.g:857:1: rule__Transition__Input_textAssignment_6 : ( ruleEString ) ;
     public final void rule__Transition__Input_textAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMyDsl.g:842:1: ( ( ruleEString ) )
-            // InternalMyDsl.g:843:2: ( ruleEString )
+            // InternalMyDsl.g:861:1: ( ( ruleEString ) )
+            // InternalMyDsl.g:862:2: ( ruleEString )
             {
-            // InternalMyDsl.g:843:2: ( ruleEString )
-            // InternalMyDsl.g:844:3: ruleEString
+            // InternalMyDsl.g:862:2: ( ruleEString )
+            // InternalMyDsl.g:863:3: ruleEString
             {
              before(grammarAccess.getTransitionAccess().getInput_textEStringParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -2508,13 +2557,13 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000009000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000009002L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000002030L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000005000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000004002L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000005002L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000040030L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000020000L});
 
 }

@@ -113,7 +113,8 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.State");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cStateKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cInitKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cInit_stateAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cInit_stateInitKeyword_1_0 = (Keyword)cInit_stateAssignment_1.eContents().get(0);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cEntryKeyword_3 = (Keyword)cGroup.eContents().get(3);
@@ -122,13 +123,13 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		
 		//State returns State:
 		//    'state'
-		//    ('init')?
+		//    init_state ?= 'init'?
 		//    name=EString
 		//    'entry' output_text=EString;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'state'
-		//('init')?
+		//init_state ?= 'init'?
 		//name=EString
 		//'entry' output_text=EString
 		public Group getGroup() { return cGroup; }
@@ -136,8 +137,11 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 		//'state'
 		public Keyword getStateKeyword_0() { return cStateKeyword_0; }
 		
-		//('init')?
-		public Keyword getInitKeyword_1() { return cInitKeyword_1; }
+		//init_state ?= 'init'?
+		public Assignment getInit_stateAssignment_1() { return cInit_stateAssignment_1; }
+		
+		//'init'
+		public Keyword getInit_stateInitKeyword_1_0() { return cInit_stateInitKeyword_1_0; }
 		
 		//name=EString
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
@@ -302,7 +306,7 @@ public class MyDslGrammarAccess extends AbstractElementFinder.AbstractGrammarEle
 	
 	//State returns State:
 	//    'state'
-	//    ('init')?
+	//    init_state ?= 'init'?
 	//    name=EString
 	//    'entry' output_text=EString;
 	public StateElements getStateAccess() {

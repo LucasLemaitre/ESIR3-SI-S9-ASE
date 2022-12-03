@@ -1,11 +1,11 @@
-'->'=16
-'['=17
-']'=18
-'entry'=14
+'->'=15
+'['=16
+']'=17
+'entry'=13
 'fsm'=11
-'init'=13
+'init'=18
 'state'=12
-'transition'=15
+'transition'=14
 RULE_ANY_OTHER=10
 RULE_ID=5
 RULE_INT=6

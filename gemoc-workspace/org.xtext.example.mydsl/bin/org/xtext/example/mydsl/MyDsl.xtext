@@ -16,7 +16,7 @@ EString returns ecore::EString:
 
 State returns State:
 	'state'
-	('init')?
+	init_state?='init'
 	name=EString
 	'entry' output_text=EString;
 
@@ -25,3 +25,5 @@ Transition returns Transition:
 	name=EString
 	start_state=[State|EString] '->' end_state=[State|EString]
 	'['input_text=EString']';
+	
+

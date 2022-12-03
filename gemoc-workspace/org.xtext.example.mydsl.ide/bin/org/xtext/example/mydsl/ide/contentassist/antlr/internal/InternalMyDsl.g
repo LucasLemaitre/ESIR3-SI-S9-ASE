@@ -371,9 +371,9 @@ rule__State__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getStateAccess().getInitKeyword_1()); }
-	('init')?
-	{ after(grammarAccess.getStateAccess().getInitKeyword_1()); }
+	{ before(grammarAccess.getStateAccess().getInit_stateAssignment_1()); }
+	(rule__State__Init_stateAssignment_1)?
+	{ after(grammarAccess.getStateAccess().getInit_stateAssignment_1()); }
 )
 ;
 finally {
@@ -746,6 +746,25 @@ rule__FSM__TransitionsAssignment_4_1
 		{ before(grammarAccess.getFSMAccess().getTransitionsTransitionParserRuleCall_4_1_0()); }
 		ruleTransition
 		{ after(grammarAccess.getFSMAccess().getTransitionsTransitionParserRuleCall_4_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__State__Init_stateAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getStateAccess().getInit_stateInitKeyword_1_0()); }
+		(
+			{ before(grammarAccess.getStateAccess().getInit_stateInitKeyword_1_0()); }
+			'init'
+			{ after(grammarAccess.getStateAccess().getInit_stateInitKeyword_1_0()); }
+		)
+		{ after(grammarAccess.getStateAccess().getInit_stateInitKeyword_1_0()); }
 	)
 ;
 finally {

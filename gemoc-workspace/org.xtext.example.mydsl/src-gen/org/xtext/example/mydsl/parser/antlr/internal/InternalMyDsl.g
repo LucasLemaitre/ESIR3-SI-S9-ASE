@@ -236,10 +236,18 @@ ruleState returns [EObject current=null]
 			newLeafNode(otherlv_0, grammarAccess.getStateAccess().getStateKeyword_0());
 		}
 		(
-			otherlv_1='init'
-			{
-				newLeafNode(otherlv_1, grammarAccess.getStateAccess().getInitKeyword_1());
-			}
+			(
+				lv_init_state_1_0='init'
+				{
+					newLeafNode(lv_init_state_1_0, grammarAccess.getStateAccess().getInit_stateInitKeyword_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getStateRule());
+					}
+					setWithLastConsumed($current, "init_state", lv_init_state_1_0 != null, "init");
+				}
+			)
 		)?
 		(
 			(

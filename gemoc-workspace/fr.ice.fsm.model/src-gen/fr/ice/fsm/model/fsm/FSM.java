@@ -71,4 +71,5 @@ public interface FSM extends EObject {
 	 */
 	EList<Transition> getTransitions();
 
+
 } // FSM

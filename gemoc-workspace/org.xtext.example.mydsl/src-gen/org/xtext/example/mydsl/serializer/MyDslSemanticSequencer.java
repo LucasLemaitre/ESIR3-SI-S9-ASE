@@ -65,19 +65,10 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     State returns State
 	 *
 	 * Constraint:
-	 *     (name=EString output_text=EString)
+	 *     (init_state?='init'? name=EString output_text=EString)
 	 */
 	protected void sequence_State(ISerializationContext context, State semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, FsmPackage.Literals.STATE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FsmPackage.Literals.STATE__NAME));
-			if (transientValues.isValueTransient(semanticObject, FsmPackage.Literals.STATE__OUTPUT_TEXT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FsmPackage.Literals.STATE__OUTPUT_TEXT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getStateAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getStateAccess().getOutput_textEStringParserRuleCall_4_0(), semanticObject.getOutput_text());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
