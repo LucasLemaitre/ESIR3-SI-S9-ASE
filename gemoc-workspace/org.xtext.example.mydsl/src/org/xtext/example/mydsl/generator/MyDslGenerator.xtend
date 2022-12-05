@@ -17,6 +17,7 @@ import fr.ice.fsm.model.fsm.FSM
 class MyDslGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
+		// COMPILATION
 		/*for(fsm: resource.allContents.toIterable.filter(FSM)){
 			var builder = new StringBuilder();
 			var v = new Visitor();
@@ -29,6 +30,8 @@ class MyDslGenerator extends AbstractGenerator {
 		    		+ "\r\n}");
 		    fsa.generateFile("Main.java", builder);
 		}*/
+		
+		// INTERPRETATION
 		for(fsm: resource.allContents.toIterable.filter(FSM)){
 			var fsmAspect = new FsmAspectInterpretor();
 			fsmAspect.run(fsm);
